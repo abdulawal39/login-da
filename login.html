@@ -1,0 +1,34 @@
+|?FAILEDLOGIN=Wrong Username or Password!!|
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login to Cloud Hosting Control Panel</title>
+	<link rel="stylesheet" href="login-css/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="login-css/login.css" />
+</head>
+<body>
+	<div class = "container">
+	<div class="wrapper">
+		<form action="" action="/CMD_LOGIN" method="POST" class="form-signin">
+			<div class="alert alert-danger" role="alert">
+			  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			  <span class="sr-only">Error:</span>
+			  |FAILEDLOGIN|
+			</div>       
+		    <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+			  <hr class="colorgraph"><br>
+			  <input type=hidden name=referer value="|REFERER|">
+			  <input type=text class=form-control name=username placeholder=Username />
+			  <input type=password class=form-control name=Password placeholder=Password />     		  
+			 
+			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button> 
+			<br />
+			|*if LOST_PASSWORD="yes"|
+			<a href="/CMD_LOST_PASSWORD">Forgot your password?</a>
+			|*endif| 			
+		</form>			
+	</div>
+</div>
+</body>
+</html>
